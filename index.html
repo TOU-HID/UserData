@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Userdata</title>
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="body">
+	<div class="div">
+		<div class="pad">
+			<div>
+				<h1 class="textColor">Sign Up</h1>
+				<form name="signup-form" onsubmit="return false">
+					<div>
+						<p id="notallowed"></p>
+					</div>
+					<table cellspacing="2" cellpadding="2" border="0">
+						<tr>
+							<td><label class="textColor" for="firstname"><b>Firstname:</b></label></td>
+							<td><input type="text" id="firstname" name="firstname" placeholder="Firstname" required /></td>
+						</tr>
+						<tr>
+							<td><label class="textColor" for="lastname"><b>Lastname:</b></label></td>
+							<td><input type="text" id="lastname" name="lastname" placeholder="Lastname" required /></td>
+						</tr>
+						<tr>
+							<td><label class="textColor" for="username"><b>Username:</b></label></td>
+							<td><input type="text" id="signup-username" name="username" placeholder="Username" pattern="[a-z]{1,15}"
+									required /></td>
+						</tr>
+						<tr>
+							<td><label class="textColor" for="dateofbirth"><b>DateOfBirth:</b></label></td>
+							<td><input type="date" id="dateofbirth" name="dateofbirth" required /></td>
+						</tr>
+						<tr>
+							<td><label class="textColor" for="password"><b>Password:</b></label></td>
+							<td><input type="password" id="signup-password" name="password" placeholder="##############" required />
+							</td>
+						</tr>
+						<tr>
+							<td><label class="textColor" for="mobileNo"><b>MobileNo:</b></label></td>
+							<td><input type="tel" id="mobileNo" name="mobileNo" placeholder="+8801715325040"
+									pattern="[0][1][3456789][0-9]{8}" required /></td>
+						</tr>
+						<tr>
+							<td><label class="textColor" for="email"><b>Email:</b></label></td>
+							<td><input type="text" id="email" name="email" placeholder="abc123@Xmail.com"
+									pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required /></td>
+						</tr>
+						<tr>
+							<td><label class="textColor" for="zipcode"><b>Zip Code:</b></label></td>
+							<td><input type="text" id="zipcode" name="zipcode" /></td>
+						</tr>
+						<tr>
+							<td><label class="textColor" for="country"><b>Country:</b></label></td>
+							<td>
+								<select id="country" name="country">
+									<option value="1" selected>choose yours</option>
+									<option value="USA">USA</option>
+									<option value="UK">UK</option>
+									<option value="INDIA">INDIA</option>
+									<option value="BANGLADESH">BANGLADESH</option>
+									<option value="AUSTRALIA">AUSTRALIA</option>
+									<option value="INDONESIA">INDONESIA</option>
+									<option value="RUSSIA">RUSSIA</option>
+								</select>
+							</td>
+						</tr>
+					</table>
+					<input class="button" type="submit" onclick="signUp()" value="Sign Up">
+				</form>
+			</div>
+
+			<div>
+				<h1 class="textColor">Login</h1>
+				<form name="login_form" onsubmit="return false">
+					<table cellspacing="2" cellpadding="2" border="0">
+						<tr>
+							<td><label class="textColor" for="username"><b>Username:</b></label></td>
+							<td><input type="text" id="login-username" name="username" required><br><br></td>
+						</tr>
+						<tr>
+							<td><label class="textColor" for="password"><b>Password:</b></label></td>
+							<td><input type="password" id="login-password" name="password" required><br><br></td>
+						</tr>
+					</table>
+					<input class="button" type="submit" onclick="login()" value="Login">
+					<input class="button" type="submit" onclick="logout()" value="Logout">
+					<input class="button" type="submit" onclick="balance()" value="Balance">
+				</form>
+			</div>
+		</div>
+		<div class="pad">
+			<div>
+				<h1 class="textColor">Transaction</h1>
+				<form name="transaction-form" onsubmit="return false">
+					<table cellspacing="2" cellpadding="2" border="0">
+						<tr>
+							<td><label class="textColor" for="username"><b>Username:</b></label></td>
+							<td><input type="text" id="transaction-username" name="username"></td>
+						</tr>
+						<tr>
+							<td><label class="textColor" for="amount"><b>Amount:</b></label></td>
+							<td><input type="number" id="amount" name="amount"></td>
+						</tr>
+					</table>
+					<input class="button" type="submit" onclick="sendAmount()" value="Transaction">
+				</form>
+			</div>
+			<div>
+				<h1 class="textColor">Deposit</h1>
+				<form name="deposit-form" onsubmit="return false">
+					<table cellspacing="2" cellpadding="2" border="0">
+						<tr>
+							<td><label class="textColor" for="username"><b>Username:</b></label></td>
+							<td><input type="text" id="depositor" name="username"></td>
+						</tr>
+						<tr>
+							<td><label class="textColor" for="amount"><b>Amount:</b></label></td>
+							<td><input type="number" id="depositamount" name="amount"></td>
+						</tr>
+					</table>
+					<input class="button" type="submit" onclick="deposit()" value="Deposit">
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- <script src="./js/script.js"></script> -->
+	<script src="./js/js.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+body {
+  background: url(./../img/website-login-background.jpg);
+  font-family: 'Bonheur Royale', cursive;
+}
+.button {
+  background-color: #1a1a1a;
+  color: 	#ffffff;
+}
+.textColor {
+  color: #ffffff;
+}
+.div {
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+}
+.pad {
+  padding: 15px;
+}
